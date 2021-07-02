@@ -1,11 +1,11 @@
-package com.example.progmobile.organizze.activity;
+package com.example.progmobile.mymoney.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.progmobile.organizze.R;
-import com.example.progmobile.organizze.config.ConfiguracaoFirebase;
+import com.example.progmobile.mymoney.R;
+import com.example.progmobile.mymoney.config.ConfiguracaoFirebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;

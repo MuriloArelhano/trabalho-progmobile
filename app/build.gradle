@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId 'com.example.progmobile.organizze'
+        applicationId 'com.example.progmobile.mymoney'
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -36,11 +36,11 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
     implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
+    implementation 'com.github.clans:fab:1.6.4'
 
     implementation 'com.google.firebase:firebase-core:19.0.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.github.clans:fab:1.6.4'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

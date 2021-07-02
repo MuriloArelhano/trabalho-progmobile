@@ -1,4 +1,4 @@
-package com.example.progmobile.organizze.adapter;
+package com.example.progmobile.mymoney.adapter;
 
 import android.content.Context;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.progmobile.organizze.R;
-import com.example.progmobile.organizze.model.Movimentacao;
+import com.example.progmobile.mymoney.R;
+import com.example.progmobile.mymoney.model.Movimentacao;
 
 import java.util.List;
 
