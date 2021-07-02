@@ -41,10 +41,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="saldo geral"
+            android:gravity="center_horizontal"
+            android:text="@string/string_saldo"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:gravity="center_horizontal" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
