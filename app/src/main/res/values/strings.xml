@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">Organizze</string>
+    <string name="app_name">My Money</string>
     <string name="title_activity_principal">PrincipalActivity</string>
+    <string name="intro1_title">Organize suas contas de onde estiver</string>
+    <string name="intro1_subtitle">Simples, fácil de usar e grátis</string>
+    <string name="intro2_title">Saiba para onde está indo seu dinheiro</string>
+    <string name="intro2_subtitle">Categorizando seus lançamentos e vendo o destino de cada centavo</string>
+    <string name="intro3_title">Nunca mais esqueça de pagar uma conta</string>
+    <string name="intro3_subtitle">Receba alertas quando quiser</string>
+    <string name="intro4_title">Tudo organizado na palma da sua mão</string>
+    <string name="intro4_subtitle">Praticidade no seu dia a dia</string>
+    <string name="intro_cadastro_title">Crie sua conta grátis</string>
+    <string name="intro_cadastro_subtitle">Comece já</string>
+    <string name="main_button_cadastro">Cadastre-se</string>
+    <string name="secondary_button_cadastro">Já tenho conta</string>
+    <string name="title_login">Acesse sua conta</string>
+    <string name="string_email">E-mail</string>
+    <string name="string_password">Senha</string>
+    <string name="string_nome">Nome</string>
+    <string name="button_cadastrar">Cadastrar</string>
+    <string name="string_termos">Termos de uso</string>
+    <string name="string_amount">R$ 00.00</string>
+    <string name="hint_date">ex: 18/06/2021</string>
+    <string name="hint_description">ex: salário</string>
+    <string name="hint_description2">"ex: salário mensal "</string>
+    <string name="string_loading">Carregando...</string>
+    <string name="string_saldo">Saldo geral</string>
+    <string name="string_title">Título</string>
+    <string name="string_category">Categoria</string>
 </resources>

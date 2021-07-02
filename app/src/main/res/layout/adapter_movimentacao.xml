@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:text="Titulo"
+                android:text="@string/string_title"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -39,14 +39,14 @@
 
         </LinearLayout>
 
-            <TextView
-                android:id="@+id/textAdapterCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:text="Categoria"
-                android:textColor="#696969"
-                android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textAdapterCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/string_category"
+            android:textColor="#696969"
+            android:textSize="14sp" />
 
 
     </LinearLayout>

@@ -1,6 +1,6 @@
-package com.example.progmobile.organizze.model;
+package com.example.progmobile.mymoney.model;
 
-import com.example.progmobile.organizze.config.ConfiguracaoFirebase;
+import com.example.progmobile.mymoney.config.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 

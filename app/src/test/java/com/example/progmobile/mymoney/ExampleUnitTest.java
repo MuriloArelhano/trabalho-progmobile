@@ -1,4 +1,4 @@
-package com.example.progmobile.organizze;
+package com.example.progmobile.mymoney;
 
 import org.junit.Test;
 

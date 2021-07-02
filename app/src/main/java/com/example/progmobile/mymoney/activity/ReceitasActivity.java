@@ -1,4 +1,4 @@
-package com.example.progmobile.organizze.activity;
+package com.example.progmobile.mymoney.activity;
 
 import com.google.android.material.textfield.TextInputEditText;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,31 +7,31 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.progmobile.organizze.R;
-import com.example.progmobile.organizze.config.ConfiguracaoFirebase;
-import com.example.progmobile.organizze.helper.Base64Custom;
-import com.example.progmobile.organizze.helper.DateCustom;
-import com.example.progmobile.organizze.model.Movimentacao;
-import com.example.progmobile.organizze.model.Usuario;
+import com.example.progmobile.mymoney.R;
+import com.example.progmobile.mymoney.config.ConfiguracaoFirebase;
+import com.example.progmobile.mymoney.helper.Base64Custom;
+import com.example.progmobile.mymoney.helper.DateCustom;
+import com.example.progmobile.mymoney.model.Movimentacao;
+import com.example.progmobile.mymoney.model.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
-public class DespesasActivity extends AppCompatActivity {
+public class ReceitasActivity extends AppCompatActivity {
 
     private TextInputEditText campoData, campoCategoria, campoDescricao;
     private EditText campoValor;
     private Movimentacao movimentacao;
     private DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
     private FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-    private Double despesaTotal;
+    private Double receitaTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_despesas);
+        setContentView(R.layout.activity_receitas);
 
         campoValor = findViewById(R.id.editValor);
         campoData = findViewById(R.id.editData);
@@ -40,13 +40,13 @@ public class DespesasActivity extends AppCompatActivity {
 
         //Preenche o campo data com a date atual
         campoData.setText( DateCustom.dataAtual() );
-        recuperarDespesaTotal();
+        recuperarReceitaTotal();
 
     }
 
-    public void salvarDespesa(View view){
+    public void salvarReceita(View view){
 
-        if ( validarCamposDespesa() ){
+        if ( validarCamposReceita() ){
 
             movimentacao = new Movimentacao();
             String data = campoData.getText().toString();
@@ -56,10 +56,10 @@ public class DespesasActivity extends AppCompatActivity {
             movimentacao.setCategoria( campoCategoria.getText().toString() );
             movimentacao.setDescricao( campoDescricao.getText().toString() );
             movimentacao.setData( data );
-            movimentacao.setTipo( "d" );
+            movimentacao.setTipo( "r" );
 
-            Double despesaAtualizada = despesaTotal + valorRecuperado;
-            atualizarDespesa( despesaAtualizada );
+            Double receitaAtualizada = receitaTotal + valorRecuperado;
+            atualizarReceita( receitaAtualizada );
 
             movimentacao.salvar( data );
 
@@ -70,7 +70,7 @@ public class DespesasActivity extends AppCompatActivity {
 
     }
 
-    public Boolean validarCamposDespesa(){
+    public Boolean validarCamposReceita(){
 
         String textoValor = campoValor.getText().toString();
         String textoData = campoData.getText().toString();
@@ -83,25 +83,25 @@ public class DespesasActivity extends AppCompatActivity {
                     if ( !textoDescricao.isEmpty() ){
                         return true;
                     }else {
-                        Toast.makeText(DespesasActivity.this,
+                        Toast.makeText(ReceitasActivity.this,
                                 "Descrição não foi preenchida!",
                                 Toast.LENGTH_SHORT).show();
                         return false;
                     }
                 }else {
-                    Toast.makeText(DespesasActivity.this,
+                    Toast.makeText(ReceitasActivity.this,
                             "Categoria não foi preenchida!",
                             Toast.LENGTH_SHORT).show();
                     return false;
                 }
             }else {
-                Toast.makeText(DespesasActivity.this,
+                Toast.makeText(ReceitasActivity.this,
                         "Data não foi preenchida!",
                         Toast.LENGTH_SHORT).show();
                 return false;
             }
         }else {
-            Toast.makeText(DespesasActivity.this,
+            Toast.makeText(ReceitasActivity.this,
                     "Valor não foi preenchido!",
                     Toast.LENGTH_SHORT).show();
             return false;
@@ -110,7 +110,7 @@ public class DespesasActivity extends AppCompatActivity {
 
     }
 
-    public void recuperarDespesaTotal(){
+    public void recuperarReceitaTotal(){
 
         String emailUsuario = autenticacao.getCurrentUser().getEmail();
         String idUsuario = Base64Custom.codificarBase64( emailUsuario );
@@ -120,7 +120,7 @@ public class DespesasActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Usuario usuario = dataSnapshot.getValue( Usuario.class );
-                despesaTotal = usuario.getDespesaTotal();
+                receitaTotal = usuario.getReceitaTotal();
             }
 
             @Override
@@ -131,13 +131,13 @@ public class DespesasActivity extends AppCompatActivity {
 
     }
 
-    public void atualizarDespesa(Double despesa){
+    public void atualizarReceita(Double receita){
 
         String emailUsuario = autenticacao.getCurrentUser().getEmail();
         String idUsuario = Base64Custom.codificarBase64( emailUsuario );
         DatabaseReference usuarioRef = firebaseRef.child("usuarios").child( idUsuario );
 
-        usuarioRef.child("despesaTotal").setValue(despesa);
+        usuarioRef.child("receitaTotal").setValue(receita);
 
     }
 

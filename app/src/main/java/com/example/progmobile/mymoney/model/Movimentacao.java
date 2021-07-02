@@ -1,8 +1,8 @@
-package com.example.progmobile.organizze.model;
+package com.example.progmobile.mymoney.model;
 
-import com.example.progmobile.organizze.config.ConfiguracaoFirebase;
-import com.example.progmobile.organizze.helper.Base64Custom;
-import com.example.progmobile.organizze.helper.DateCustom;
+import com.example.progmobile.mymoney.config.ConfiguracaoFirebase;
+import com.example.progmobile.mymoney.helper.Base64Custom;
+import com.example.progmobile.mymoney.helper.DateCustom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 

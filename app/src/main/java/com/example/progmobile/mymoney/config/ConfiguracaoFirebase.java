@@ -1,4 +1,4 @@
-package com.example.progmobile.organizze.config;
+package com.example.progmobile.mymoney.config;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;

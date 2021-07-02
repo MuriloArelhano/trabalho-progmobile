@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.progmobile.organizze">
+    package="com.example.progmobile.mymoney">
 
     <application
         android:allowBackup="true"
@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.progmobile.organizze.activity.MainActivity">
+            android:name="com.example.progmobile.mymoney.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.progmobile.organizze.activity.LoginActivity" />
-        <activity android:name="com.example.progmobile.organizze.activity.CadastroActivity" />
+        <activity android:name="com.example.progmobile.mymoney.activity.LoginActivity" />
+        <activity android:name="com.example.progmobile.mymoney.activity.CadastroActivity" />
         <activity
-            android:name="com.example.progmobile.organizze.activity.PrincipalActivity"
+            android:name="com.example.progmobile.mymoney.activity.PrincipalActivity"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.progmobile.organizze.activity.ReceitasActivity"
+        <activity android:name="com.example.progmobile.mymoney.activity.ReceitasActivity"
             android:theme="@style/receitaTheme" />
-        <activity android:name="com.example.progmobile.organizze.activity.DespesasActivity"
+        <activity android:name="com.example.progmobile.mymoney.activity.DespesasActivity"
             android:theme="@style/despesaTheme">
 
         </activity>

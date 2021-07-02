@@ -1,4 +1,4 @@
-package com.example.progmobile.organizze.activity;
+package com.example.progmobile.mymoney.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,12 +16,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.progmobile.organizze.R;
-import com.example.progmobile.organizze.adapter.AdapterMovimentacao;
-import com.example.progmobile.organizze.config.ConfiguracaoFirebase;
-import com.example.progmobile.organizze.helper.Base64Custom;
-import com.example.progmobile.organizze.model.Movimentacao;
-import com.example.progmobile.organizze.model.Usuario;
+import com.example.progmobile.mymoney.R;
+import com.example.progmobile.mymoney.adapter.AdapterMovimentacao;
+import com.example.progmobile.mymoney.config.ConfiguracaoFirebase;
+import com.example.progmobile.mymoney.helper.Base64Custom;
+import com.example.progmobile.mymoney.model.Movimentacao;
+import com.example.progmobile.mymoney.model.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -61,7 +61,7 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Organizze");
+        toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
 
         textoSaldo = findViewById(R.id.textSaldo);
